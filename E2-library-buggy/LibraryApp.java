@@ -1,9 +1,10 @@
 // LibraryApp.java - Aplicación principal
 public class LibraryApp {
     public static void main(String[] args) {
+        //Creada la librería library
         Library library = new Library();
         
-        // Agregar algunos libros
+        // Agregar algunos libros a library
         library.addBook(new Book("Clean Code", "Robert Martin", "978-0132350884"));
         library.addBook(new Book("Clean Code", "Robert Martin", "978-0132350884")); // Duplicado
         library.addBook(new Book("Design Patterns", "Gamma et al.", "978-0201633610"));
