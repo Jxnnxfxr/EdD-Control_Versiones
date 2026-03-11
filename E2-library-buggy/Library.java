@@ -6,19 +6,18 @@ public class Library {
     
     public void addBook(Book book) {
         boolean repetido = false;
-        // BUG 4: Permite libros duplicados (mismo ISBN)
         for (Book b : books) {
             if (book.getIsbn().equals(b.getIsbn())) {
-                //NO Se guarda
                 repetido = true;
+                break;
             }
             if(!book.getIsbn().equals(b.getIsbn())){
                 repetido = false;
-                //Se guarda
             } 
         }
-        if (repetido = false) {
-            books.add(book);    
+        if (repetido == false) {
+            books.add(book);
+            System.out.println("Libro añadido correctamente");    
         } else {
             System.out.println("El libro con ISBN: [" + book.getIsbn() + "] ya se encuentra en la biblioteca");
         }
