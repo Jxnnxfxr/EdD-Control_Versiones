@@ -36,7 +36,6 @@ public class Book {
     }
     
     //MÉTODOS DE LA CLASE
-    //Préstamos de libros
     public void borrow() {
         if(available == true){
             System.out.println("El libro está disponible: El prestamo ha sido realizado.");
@@ -48,7 +47,6 @@ public class Book {
         }
     }
     
-    //Devolución de libros
     public void returnBook() {
         if(available == false){
             System.out.println("El libro: " + getTitle() + " ha sido devuelto a la librería correctamente.");
@@ -60,4 +58,8 @@ public class Book {
         }
 
     }
+
+
+
+
 }

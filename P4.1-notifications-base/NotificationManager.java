@@ -6,10 +6,13 @@ public class NotificationManager {
     
     public void send(String type, String message, String recipient) {
         if (type.equals("email")) {
-            EmailService email = new EmailService(type, message, recipient);
-            email.send(message, recipient);
+            // Código para enviar email
+            System.out.println("Enviando email a " + recipient + ": " + message);
+            // Lógica compleja de email aquí...
         } else if (type.equals("sms")) {
-            
+            // Código para enviar SMS
+            System.out.println("Enviando SMS a " + recipient + ": " + message);
+            // Lógica compleja de SMS aquí...
         } else if (type.equals("push")) {
             // Código para notificación push
             System.out.println("Enviando push a " + recipient + ": " + message);

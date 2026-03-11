@@ -32,12 +32,6 @@ public class EmailService implements NotificationService{
 
     //MÉTODOS DE LA CLASE
     //TODO: CÓDIGO PARA ENVIAR EMAIL
-    @Override 
-    public void send(String message, String recipient){
-            // Código para enviar EMAIL
-            System.out.println("Enviando EMAIL a " + recipient + ": " + message);
-
-    }
     
     @Override
     public void sendMultiple(String message, String... recipient) {

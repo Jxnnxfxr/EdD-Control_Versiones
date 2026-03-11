@@ -31,14 +31,7 @@ public class PushService implements NotificationService{
     
 
     //MÉTODOS DE LA CLASE
-
     //TODO: CÓDIGO PARA ENVIAR EMAIL
-    @Override 
-    public void send(String message, String recipient){
-            // Código para enviar push
-            System.out.println("Enviando Push a " + recipient + ": " + message);
-
-    }
     
     @Override
     public void sendMultiple(String message, String... recipient) {
