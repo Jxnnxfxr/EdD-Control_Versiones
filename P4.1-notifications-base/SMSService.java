@@ -32,6 +32,12 @@ public class SMSService implements NotificationService{
 
     //MÉTODOS DE LA CLASE
     //TODO: CÓDIGO PARA ENVIAR EMAIL
+    @Override 
+    public void send(String message, String recipient){
+            // Código para enviar SMS
+            System.out.println("Enviando SMS a " + recipient + ": " + message);
+
+    }
     
     @Override
     public void sendMultiple(String message, String... recipient) {

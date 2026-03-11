@@ -5,8 +5,24 @@ public class Library {
     private List<Book> books = new ArrayList<>();
     
     public void addBook(Book book) {
+        boolean repetido = false;
         // BUG 4: Permite libros duplicados (mismo ISBN)
-        books.add(book);
+        for (Book b : books) {
+            if (book.getIsbn().equals(b.getIsbn())) {
+                //NO Se guarda
+                repetido = true;
+            }
+            if(!book.getIsbn().equals(b.getIsbn())){
+                repetido = false;
+                //Se guarda
+            } 
+        }
+        if (repetido = false) {
+            books.add(book);    
+        } else {
+            System.out.println("El libro con ISBN: [" + book.getIsbn() + "] ya se encuentra en la biblioteca");
+        }
+        
     }
     
     public Book findBookByTitle(String title) {
@@ -23,7 +39,7 @@ public class Library {
         List<Book> availableBooks = new ArrayList<>();
         // BUG 6: ConcurrentModificationException potencial
         for (Book book : books) {
-            if (true) { // BUG 7: Siempre true, no verifica disponibilidad real
+            if (book.isAvailable() == true) {
                 availableBooks.add(book);
             }
         }
